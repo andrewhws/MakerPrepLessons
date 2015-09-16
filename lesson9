@@ -65,3 +65,54 @@ console.log(myDreamLife[locationVar]);
 
 
 
+//
+
+
+
+var car = {
+  make: "Toyota"
+  
+};
+
+car["model"] = "Camry";
+console.log(car["model"]);
+console.log(car.model);
+
+car.model = "Prius";
+console.log(car["model"])
+console.log(car.model);
+
+
+var prop = "year";
+// how can we set the car's year using the variable prop?
+
+car[prop] = 1966
+console.log(car.year)
+
+car["nothingHere"] = 1
+console.log(car["nothingHere"])
+
+Exercise 3 Dream Car
+
+var dreamCar = {};
+
+dreamCar.make = "Tesla";
+dreamCar.model= "p85d";
+dreamCar.color = "grey";
+dreamCar.year = 2018;
+dreamCar.registered = true;
+
+console.log(dreamCar)
+
+// Exercise 4
+
+
+
+
+
+
+
+
+
+
+
