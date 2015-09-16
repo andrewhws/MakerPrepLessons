@@ -241,5 +241,59 @@ if (userInput === "ROCK" && comp === 0) {
   
 }   
     
+    
+    
+    
+    
+// Exercise 9: Guess a number
+// noprotect
+
+var n = parseInt(prompt("What would you like your target number to be?"));
+
+while (isNaN(n)) {
+  
+  var n = parseInt(prompt("You have to enter a number!"));  
+  
+}
+
+var ranNum = (Math.floor(Math.random() * (n - 1)) + 1);
+
+
+var guess = prompt("Guess the number");
+
+while (guess !== ranNum) {
+  
+  if (guess > ranNum) {
+    alert("your guess was too high");
+  }
+  else if (guess < ranNum) {
+    alert("your guess was too low!");
+    
+  }
+  
+  var guess = parseInt(prompt("Guess again"));
+  
+}
+
+
+
+
+// Exercise (10) 11 Interest Rate Calculator
+
+
+var startingBalance = Number(prompt("whats the initial investment"));
+var targetBalance = Number(prompt("what do you want to make?"));
+var interestRate =Number(prompt("what is the interest rate?"));
+var years = 0;
+
+while (startingBalance < targetBalance) {
+  
+  var count = startingBalance;
+  count += startingBalance * (1 * interestRate);
+  console.log(years);
+  startingBalance++;
+ 
+  years++;
+}
 
 
