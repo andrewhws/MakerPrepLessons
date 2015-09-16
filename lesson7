@@ -1,0 +1,170 @@
+// Lesson 7
+// Exercise 1
+
+// Use the console to write an expression which compares two strings and produces a true value.
+// Write an expression comparing two strings which produces a false value.
+// Determine whether string comparison is case sensitive
+// Determine whether string comparison is space sensitive (does adding extra spaces change the outcome?)
+// Write an expression that considers the equivalency of a string and a number and produces a false value
+// Write an expression that considers the equivalency of a number and a string and produces a true value
+
+
+
+
+// Exercise 1
+//1
+console.log("Andrew" === "Andrew");
+//2
+console.log("dog" === "dog"); 
+//3
+console.log("Andrew" === "andrew");
+//4
+console.log("test " === "test");
+//5
+console.log("one" === 1);
+//6
+console.log("1" == 1);
+
+
+
+
+
+//Exercise 2
+
+if (true) {
+  console.log("oh yeah");
+}
+
+if (false) {
+  console.log("the condition was false");
+}
+
+if (5 > 4) {
+  console.log("makes sense");
+}
+
+if (2 === 5) {
+  console.log("if you're seeing this something's wrong");
+}
+  if (prompt("how are you doing?") === "good") {
+    console.log("well I'm glad to hear that");
+  }
+
+
+
+
+
+// Exercise 3
+
+
+if (true) {
+  console.log("always runs");
+}
+
+if (false) {
+  console.log("never run");
+}
+
+if (prompt("are you happy or sad?") === "sad") {
+  console.log("I'm sorry to hear that");
+}
+
+if (prompt("what is the secret number") !== 3) {
+    console.log("you are not allowed");
+}
+
+if (prompt("enter the password") === "1111") {
+   console.log("welcome my friend"); 
+} else {window.location = "http://www.google.com";}
+
+
+
+
+
+
+//Exercise 4
+
+
+var hero, badGuy;
+
+hero = prompt("is the hero 'strong' or 'weak'?");
+badGuy = prompt("is the badGuy 'strong' or 'weak'?");
+
+if (hero === "strong" || hero === "weak" ) {
+  
+  if (badGuy === "weak" && hero === "strong") {
+    console.log("aha an easy victory");
+  
+  } else if (hero === "weak" && badGuy === "weak" || hero === "strong" && badGuy === "strong") {
+  console.log("let us battle to the death");
+  }
+  else if (hero === "weak" && badGuy === "strong") {
+    console.log("the bad guy wins");
+  }
+  
+} else {console.log("I don't recognize your response");}
+
+//Exercise 6 pseudo code conditional
+
+
+var date, personality, meDates, plans;
+
+date = prompt("are you financially stable?");
+personality = prompt("are you a jerk");
+
+if (date === "yes" && personality === "no") {
+  
+  console.log("I'm super excited to go");
+}
+
+  else if (date === "no" || personality === "yes") {
+    myDates = prompt("how many dates have I had this week?");
+  plans = prompt("do you have any plans?");
+  
+    if (meDates < 3 || plans === "no") {
+  console.log("I'll go but not excited");
+  } else {
+  console.log("no thank you I will not go");
+    }  
+    
+ }  else console.log("I don't understand your response");
+
+
+/////
+
+var name, age, gender, isMember, isThirsty, drinkFav;
+
+name = prompt("what is your name?"); {
+  alert("hello " + name);
+}
+
+age = prompt("how old are you?");
+
+  if (age >19) {alert("welcome to da club");}
+
+else {alert("you too young");}
+
+if (age > 19) {
+             
+    isThirsty = prompt("Are you thirsty " + name + " ?"); 
+  
+  if (isThirsty === "yes") {
+    drinkFav = prompt("what is your favorite drink?");
+                 
+      alert("Here's a bottle of " + drinkFav + "!");
+  }
+
+  else if (isThirsty === "no") {alert("okay be lame");}
+  
+   else alert("eat it");
+
+          }
+console.log("Either way you are something");
+
+
+
+
+ 
+
+
+
