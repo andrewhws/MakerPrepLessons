@@ -166,19 +166,22 @@ while ( !(input = prompt("write something")) ){
 console.log("yay you wrote: " + input);
 
 
-// Exercise 7
+// Exercise 7  Write code to ask a user to enter an integer greater than 0. Keep asking for a number until it is valid (> 0)
+//noprotect
 
-  var userAnswer = parseInt(prompt("give me a number greater than 0"));
+var user = parseInt(prompt("Enter a number greater than 0"));
 
-
-
-while ( userAnswer === 0) {
- 
-  userAnswer = parseInt(prompt("Invalid input"));
+while (user <= 0) {
   
-}
+  alert("you had one job to do");
+  
+  var user = parseInt(prompt("Enter a number greater than 0"));
+    
+  
+} 
+alert("good job you didn't enter 0");
 
-alert("good job");
+
 
 
 // Exercise 8 Rock, Paper, Scissors
