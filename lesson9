@@ -1,0 +1,67 @@
+Lesson 9 Objects
+
+
+
+var person = {
+  "name": "Mario",
+  "job": "Plumb"
+};
+
+console.log(person["name"]);
+
+person["name"] = "luigi";
+
+console.log(person["name"]);
+
+//
+
+var myCat = {
+  
+  "name": "neeson",
+  "age": 10,
+  "alive": true,
+  "toy": "mouse",
+  "dumb": "yes"
+}
+
+console.log(myCat["name"]);
+
+//
+
+var human = {};
+
+human["name"] = "bob";
+human["age"] = 75;
+
+var property = "age";
+
+console.log(human[property]);
+
+
+//
+
+// dream life object, showing you can use variables as keys
+
+var myDreamLife = {};
+
+
+var propertyKey = "job";
+myDreamLife[propertyKey] = "Snapchat";
+
+var anotherPropertyKey = "salary";
+myDreamLife[anotherPropertyKey] = "105K";
+
+console.log(myDreamLife[propertyKey]); //snapchat
+console.log(myDreamLife["job"]); //snapchat
+
+var nextProperty = "car";
+myDreamLife[nextProperty] = "Tesla";
+console.log(myDreamLife["car"]);
+
+
+var locationVar = "location";
+myDreamLife[locationVar] = "LA";
+console.log(myDreamLife[locationVar]);
+
+
+
