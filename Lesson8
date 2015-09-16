@@ -1,0 +1,242 @@
+// Lesson 8
+
+//Exercise 1:
+
+var n = 0;
+
+console.log("I am called the count, because I love to count");
+
+while (n < 10) {
+  console.log(n, "hahaha");
+  n++;
+}
+
+console.log("fin");
+
+
+// 99 bottles of beer on the wall
+
+
+var n = 100, song = "";
+
+while (n >= 0) {
+  if (n !== 0) {
+      song = song + " " + n + " bottles of beer on the wall";
+      
+  } else {
+    song += " no bottles of beer! stumble stumble";
+  }
+  n--;
+} console.log (song);
+
+
+// while loop that counts from 0-50 by twos
+
+var n = -2;
+
+while (n < 50) {
+  
+  n += 2;
+  console.log(n);
+}
+
+
+// Exercise 2 : Code a while loop that builds as a single string the numbers 1-n with commas, with no comma on the last integer
+
+var n = 12,
+    count = 1,
+    sum = "";
+  fullString = "";
+
+ while (count < n) {
+    
+     sum += count + ", ";
+     count++;    
+     fullString = sum;  
+   
+ }  console.log (fullString + n);
+
+ 
+//Exercise 3: Cumulative Product
+
+var n = 1,
+    product = 1;
+
+while (n <= 10) {
+  
+  product *= n;
+  n++;
+  console.log(product);
+}
+
+
+//Exercise 4 FizzBuzz
+
+var count = 1,
+    target = 100;
+
+
+while (count < target) {
+  
+  if (count % 3 === 0 && count % 5 === 0 )
+    {console.log("FizzBuzz");
+    }
+  else if (count % 5 === 0){
+    console.log("fizz");
+  }
+  else if (count % 3 === 0){
+    console.log("buzz");
+  }
+  else { console.log(count); }
+  count++;
+} 
+
+
+// Nested while loop
+
+var i = 1;
+var n = 5;
+var j;
+
+while ( i <= n) {  
+  j = 1;
+  while (j <= n) {
+    console.log("i is", i, "and j is", j);
+    j++;
+  }
+  i++;  
+}
+
+
+// Exercise 5
+
+var n = 5,
+    count = 0,
+    print = "";
+    var count2 = 1;
+ var count3= 1;
+
+while ( count < 5) {
+  count++;
+  
+  
+  while (count2 < count) {
+    count2++;
+    
+    print += (count2 -1) + ", ";
+    console.log("welcome " + count + " Meet " + print);   
+   
+  }
+  
+}
+
+
+
+// Exercise 6
+
+console.log(Math);
+
+console.log(Math.PI);
+
+console.log(Math.E);
+
+console.log(Math.pow(9,2));
+
+console.log(Math.random());
+
+console.log(Math.floor(7.2));
+
+console.log(Math.ceil(7.2));
+
+console.log(Math.ceil (Math.random() * 10) );
+console.log(Math.ceil (Math.random() * 10) );
+
+console.log( parseInt ("23"));
+
+console.log( parseInt (23) );
+
+console.log( parseInt ("twenty") );
+
+
+var input;
+
+while ( !(input = prompt("write something")) ){
+  console.log("you didn't write anything");
+} 
+console.log("yay you wrote: " + input);
+
+
+// Exercise 7
+
+  var userAnswer = parseInt(prompt("give me a number greater than 0"));
+
+
+
+while ( userAnswer === 0) {
+ 
+  userAnswer = parseInt(prompt("Invalid input"));
+  
+}
+
+alert("good job");
+
+
+// Exercise 8 Rock, Paper, Scissors
+
+//noprotect (for jsbin.com to loop)
+
+var userInput;
+var comp;
+var gameRunning = true;
+ 
+
+while (gameRunning) {
+
+  userInput = prompt("choose Rock, Paper, or Scissors").toUpperCase();
+  comp = Math.floor(Math.random() * 3);
+
+if (userInput === "ROCK") {    
+
+if (userInput === "ROCK" && comp === 0) {
+     alert("The computer picked scissors, you win!!!");
+} 
+     else if (comp === 1) {
+       alert("The computer picked Rock as well! It's a tie...");
+     }
+       else if (comp === 2) {
+         alert("The computer picked paper! You lose :(");
+       }
+
+} else if (userInput === "PAPER") {  
+
+   if (userInput === "PAPER" && comp === 1){
+     alert("The computer picked rock, you win!!!");
+   }   
+     else if (comp === 2) {
+       alert("The computer picked Paper as well! It's a tie...");
+     }
+       else if (comp === 0) {
+         alert("The computer picked scissors! You lose :(");
+       }
+  
+} else if (userInput === "SCISSORS") {  
+      
+     if (userInput === "SCISSORS" && comp === 2){
+     alert("The computer picked Paper, you win!!!");
+     }  
+     else if (comp === 0) {
+      alert("The computer picked Scissors as well! It's a tie...");
+     }
+       else if (comp === 1) {
+         alert("The computer picked Rock! You lose :(");
+    }
+
+} else {alert("Opps! Invalid input!");
+       }
+ 
+  gameRunning = confirm("would you like to play again yes or no?");
+  
+}   
+    
+
+
