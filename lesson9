@@ -106,6 +106,104 @@ console.log(dreamCar)
 
 // Exercise 4
 
+var demo_object  = {
+  one: 1,
+  two: 2,
+  three: 3
+};
+
+var one = "three";
+
+console.log(demo_object[one]); // without quotes this is the exact same as saying "three"
+// with quotes it would be 1
+console.log(one);
+
+var state_capitals = {
+  California: "Sacramento",
+  Texas: "Austin"
+};
+
+var place = "California";
+
+console.log(state_capitals["place"]);
+console.log(state_capitals.place);
+console.log(state_capitals[place]);
+
+console.log(state_capitals["California"]);
+console.log(state_capitals.California);
+console.log(state_capitals[California]); //won't work cause it's looking for a variable
+
+
+var obj = {
+  greeting: "howdy",
+  direction: "down",
+  color: "red"
+};
+
+for (var key in obj) {
+  console.log(obj[key])
+};
+// this is the same as the following:
+
+console.log(obj["greeting"]);
+console.log(obj["direction"]);
+console.log(obj["color"]);
+
+
+
+
+
+
+//Exercise 5 for in loop to log previous objects
+
+
+for (var arbitrary in obj) {
+  
+  if (arbitrary === "color") {
+  
+  console.log(obj[arbitrary]);
+  }
+}
+
+var targetKey = "greeting";
+
+for (var whatever in obj) {
+  if (whatever === targetKey) {
+    console.log(obj[targetKey]);
+  }
+}
+
+
+
+
+
+// Exercise 6
+
+
+
+var politicos = {
+  secretary_of_state: "hillary clinton",
+  potus: "barack obama",
+  flotus: "michelle obama",
+  vice_prez: "joe biden",
+  gov_of_california: "jerry brown"
+};
+
+var string = "";
+
+for (var key in politicos) {
+  
+  string += politicos[key] + " "; 
+  
+}
+console.log(string);
+
+
+for (var key in politicos) {
+  
+  console.log(key + ": " + politicos[key]); 
+  
+}
 
 
 
