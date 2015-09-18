@@ -1,0 +1,144 @@
+// LESSON 10
+
+
+
+
+// Your code here
+
+var myArray = []
+
+myArray[0] = "Andrew Howes";
+myArray[1] = "andrewmhowes";
+
+var cutName = function(string) {
+
+  return string.split(" ");
+   
+
+};
+cutName(myArray[0]);
+
+
+var myData = {};
+
+myData.fullName = cutName(myArray[0]);
+myData.skype = myArray[1];
+myData.github = "andrewhws";
+
+
+
+
+var greeter = function() {
+  console.log("Hello, nice to meet you.");
+};
+
+// do we see a console.log yet?
+
+reference
+greeter;
+
+do we see a console.log yet?
+
+// invocation
+greeter();
+
+// do we see a console.log yet?
+
+greeter();
+greeter();
+greeter();
+
+
+
+var time = function() {
+  
+console.log(new Date());
+return new Date();
+};
+
+console.log("hey " + time());
+
+var greeter = function () {
+  return 'Hello';
+};
+
+console.log(greeter())
+
+
+var saying_generator = function () {
+  var phrase = "hey, " + "it's the " + "Fonz";
+  return phrase;
+};
+
+var saying = saying_generator();
+console.log(saying);
+
+
+
+// Exercise 2
+
+var random_number = function () {
+
+  
+  return Math.floor(Math.random() * 10);
+};
+
+var tenRandom = 10
+
+while ( tenRandom > 0) {
+  
+  
+  
+  console.log(random_number());
+  tenRandom--
+  
+}
+
+
+
+
+
+
+
+// Exercise 4 factoral while function
+
+var factoral_of_n = function (number) {
+  
+  var input = 1;
+  while (number > 0) {
+  input *= number;
+    number--;
+   
+  } return input;
+  
+};
+
+console.log(factoral_of_n(5));
+
+
+
+
+
+
+// Exercise 5 FizzBuzz 2 
+
+
+var countUpTo = parseInt(prompt("target number?"))
+
+var thisThis = function (string1, string2, CountUpTo) {
+  
+  
+  
+  for (var i = 0; i < countUpTo; i++) {
+  if (i % 5 === 0 && i % 3 ===0) {
+console.log(string1 + string2);
+  } else if (i % 5 === 0) {
+    console.log(string1)
+  } else if (i % 3 === 0 ) {
+    console.log(string2)
+  } else {console.log(i)}
+  
+  
+  }
+}
+ thisThis("hey ", "you", countUpTo)
