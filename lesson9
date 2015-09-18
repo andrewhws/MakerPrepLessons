@@ -238,6 +238,66 @@ console.log(reverse_politico_lookup);
 
 
 
+//Exercise 8 complex objects fun
+
+
+var complex_object = {
+  string: "I'm a string!",
+  number: 42,
+  //don't worry about this too much yet, just accept thats its a different data type
+  array: ["all sorts of stuff", 10, true, undefined, function(){console.log('beepity-beep');}],
+  //we haven't covered functions yet either, just accept that they too can be stored in objects
+  fn: console.log,
+  //Now THIS is interesting, an object INSIDE of an object!?
+  simple_object: {name: 'bob', location: 'basement', happy: 'false'},
+};
+
+console.log(complex_object.string);
+console.log(complex_object.array);
+console.log(complex_object.simple_object.name);
+console.log(complex_object.fn("print me!"));
+
+for (var key in complex_object.simple_object) {
+  console.log(complex_object.simple_object[key]);
+}
+
+// my own:
+
+var sample = {
+  nestObj1: {yes: "hello", nestObj2: {level2: "testLevel2", test2: "testMe2",nestObj3 : {thirdL: "whoahWeDeep", dream: "inceptionTime"}}, l1: "level1 still"},
+  what: "is dis"
+ 
+};
+
+console.log(sample.nestObj1.nestObj2.nestObj3.dream);
+
+
+
+
+var theOneTrueObject = {
+  name: "Neo",
+  status: "The One",
+  mentor: "Morpheus",
+  sunglasses: true,
+  trenchcoat: true
+}
+
+var theSameObject = theOneTrueObject;
+
+console.log(theOneTrueObject);
+console.log(theSameObject);
+
+
+theOneTrueObject.sunglasses = false;
+theOneTrueObject.trenchcoat = false;
+
+
+
+console.log(theOneTrueObject);
+console.log(theSameObject);
+
+
+
 
 
 
