@@ -207,6 +207,33 @@ for (var key in politicos) {
 
 
 
+// Exercise 7 reverse assignment of politicos object
+
+
+
+var politicos = {
+  secretary_of_state: "hillary clinton",
+  potus: "barack obama",
+  flotus: "michelle obama",
+  vice_prez: "joe biden",
+  gov_of_california: "jerry brown"
+};
+
+
+var reverse_politico_lookup = {};
+
+for (var key in politicos) {
+  
+  
+  reverse_politico_lookup[politicos[key]] = key; 
+ 
+}
+console.log(reverse_politico_lookup);
+
+
+// what's happening above is the reverse key is being assigned the politicos "key:values" ..
+//so the left "keys" will now be hilary, barak, etc, and we are making those values equal to the "key" of politicos
+
 
 
 
