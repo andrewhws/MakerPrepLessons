@@ -1,0 +1,370 @@
+//Practise
+
+var nums = [5, 10, 20, 50, 100, 250];
+
+console.log(nums[0]);
+console.log(nums[1]);
+console.log(nums[5]);
+console.log(nums[6]);
+
+var index = 4
+
+console.log(nums[index]);
+
+var len = nums.length;
+console.log(nums[len]) // equals undefined
+console.log(nums[len - 1]) // equals 250
+
+
+var words = ["hello", "and", "welcome", "to", "my", "webpage!"];
+
+console.log(words[0]);
+console.log(words[6]);
+
+var the_number_three = 3;
+console.log(words[the_number_three]);
+
+var len = words.length;
+console.log(words[len]);
+console.log(words[len -1]);
+
+var all_kinds_of_stuff = ["hello", 3, undefined, true, ["whoah", "array", "in", "arary"], null];
+
+console.log(all_kinds_of_stuff[0]);
+console.log(all_kinds_of_stuff[1]);
+console.log(all_kinds_of_stuff[4]);
+console.log(all_kinds_of_stuff[6]);
+
+var another_array = all_kinds_of_stuff[4];
+
+console.log(all_kinds_of_stuff[4][1]);
+
+var obj = {
+  name: "bob",
+  age: 24,
+  arr: ["test", "one", "two"]
+};
+
+
+
+for (var key in obj) {
+  
+  console.log(obj["arr"][0])
+  
+}
+
+
+
+var arr = [];
+
+arr[0] = "0 is the new 1";
+arr[1] = 45;
+arr[2] = null;
+arr[3] = true;
+
+console.log(arr[1])
+
+arr[1] = "overwrite 45";
+
+console.log(arr[1]);
+
+
+// Exercise 1
+
+
+var recipe = [];
+
+recipe[0] = "add butter";
+recipe[1] = "add sugar";
+
+console.log(recipe[1]);
+recipe[2] = "mix";
+
+console.log(recipe[2]);
+recipe[3] = "hello";
+
+
+var lastStep = (recipe.length - 1);
+
+console.log(recipe[lastStep]);
+
+
+
+
+var arr = ['stuff', 'more stuff', 'even more stuff'];
+
+console.log(arr.length);
+
+arr.push("more on the end");
+
+console.log(arr);
+console.log(arr.length);
+
+var lastItem = arr.pop();
+
+console.log(arr);
+console.log(arr.length);
+
+arr.unshift("more at the beginning");
+
+console.log(arr);
+
+var firstItem = arr.shift();
+
+console.log(arr);
+
+
+
+
+
+// Exercise 2
+
+var bucketList = [];
+
+bucketList[0] = "eat da fish";
+bucketList[1] = "clean da fish";
+
+bucketList.push("put in garbage", "take out garbage");
+
+console.log(bucketList);
+
+bucketList.unshift("buy da fish", "take fish home");
+
+console.log(bucketList.length);
+console.log(bucketList);
+
+var dyingWish = bucketList.pop();
+
+console.log(dyingWish);
+
+var doItNow = bucketList.shift();
+
+console.log(doItNow);
+console.log(bucketList);
+
+console.log(bucketList.length);
+
+// push adds whatever to the end
+// unshift adds to the beginning
+// pop deletes the last value
+// shift deletes the first value (and shifts over) it's like backspace
+
+
+var i = 0;
+
+while (i < words.length) {
+  console.log(words[i]);
+  i++;
+  
+}
+
+
+// Exercise 3
+
+
+var i = 0;
+
+
+function logArray(inputArr) {
+  
+while (i < inputArr.length) {
+  console.log(inputArr[i]);
+  i++;
+}
+}
+logArray(bucketList);
+
+
+Exercise 4 Reverse push array
+
+var sampleArr = [1, 2, 3, 4, 5];
+
+function reverser(arrayInput) {
+  
+  newArray = [];
+  
+  for (var i = 0; i < arrayInput.length; i++) {
+    newArray.unshift(arrayInput[i]);
+      
+  }
+  
+  return newArray;
+}
+
+console.log(reverser(sampleArr));
+
+console.log(sampleArr);
+
+
+// Exercise 5 biggest smallest
+
+var sampArr = [1,-10,33,16,4,25,106]
+
+function biggestSmallest (numArray) {
+  
+  var biggest ;
+  var smallest;
+  var both = [];
+  
+  for (var i = 0; i < numArray.length; i++){
+    
+    biggest = Math.max(numArray[i]);
+    smallest = Math.min(numArray[i]);  
+    
+    
+  } 
+        var both.push(biggest, smallest);
+        return both
+}
+
+console.log(biggestSmallest(sampArr));
+
+// Write a function `biggestSmallest` that takes an array of numbers as an input, and using a `for` loop, returns an array containing the smallest number in the zeroth position and the largest number in the first position.
+function biggestSmallest(arr) {
+  var returnArr = [];
+  var smallest = arr[0];
+  var largest = arr[0];
+
+  for (var i = 1; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      largest = arr[i];
+    } else if (arr[i] < smallest) {
+      smallest = arr[i];
+    }
+  }
+  returnArr.push(smallest, largest);
+  return returnArr;
+}
+
+// For example, given the input `[1,-10,33,16,4,25,106]`, `biggestSmallest` should return `[-10,106]`
+console.log(biggestSmallest([1,-10,33,16,4,25,106]));
+
+
+
+
+
+// Exercise 6
+
+var original = [1,2,3,4];
+
+
+function arrayDuplicator(inputArray) {
+var outputArray = [];
+   
+    outputArray = inputArray.slice(1, 3); 
+  return outputArray;
+}
+console.log(arrayDuplicator(original));
+
+var duplicated = arrayDuplicator(original);
+
+duplicated.pop();
+
+console.log(original, duplicated);
+
+
+Array.concat()
+
+var friends = ['ada', 'will', 'bianca', 'abe'];
+var enemies = ['john', 'alice'];
+
+var frenemies = friends.concat(enemies);
+
+console.log(frenemies);
+
+console.log(friends, enemies);
+
+
+
+
+
+// Exercise 7
+
+
+function arrayCombiner (array1, array2) { 
+
+  
+  var newArray = [];
+  
+  for (var i = 0; i < array1.length; i++) {
+    newArray.push( array1[i] );
+  }
+  for (var i = 0; i < array2.length; i++) {
+    newArray.push( array2[i] );
+  }
+  
+  return newArray
+  
+
+}
+
+var combinedArray = arrayCombiner([1,2,3], [4,5,6]);
+
+
+console.log(combinedArray);
+
+
+
+
+
+// Exercise 8
+
+var frenemies = ['ada', 'will', 'bianca', 'abe', 'john', 'alice'];
+
+var startingAtIndex = 3;
+var numberToRemove = 2;
+
+// console.log(frenemies.splice(startingAtIndex, numberToRemove));
+
+
+
+function arrayPlucker(array1, index) {
+
+  var newValue;
+  newValue = array1.splice(index, 2) //splice has two parameters, where you want to start and how many values to take out
+  
+  return newValue[0];
+  
+  
+}
+
+console.log(arrayPlucker(frenemies, 1) )
+
+
+
+// Exercise 9 Magic 8 ball
+
+
+var words = ["maybe", "yes", "no", "for sure"];
+
+var userInput = prompt("ask me a question");
+
+var rand = Math.floor( Math.random() * words.length);
+
+alert(words[rand]);
+
+
+
+
+
+
+
+
+
+// Exercise 10
+
+
+function test(input) {
+  
+  for (var i = 0; i < input.length; i++){
+      if (input[i] === "Hello") {
+    
+        return true;
+       }  
+    
+  }return false;
+}
+
+var arr = ["hey", "Hello"];
+
+console.log(test(arr));
