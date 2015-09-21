@@ -1,0 +1,265 @@
+//Lesson 12 
+
+
+
+var say_hi = function () {
+  console.log("hi");
+};
+
+ var greeter = say_hi;
+
+say_hi();
+greeter();
+
+console.log(say_hi());
+
+
+var runner = function (fn) {
+  console.log("invoking function now");
+  fn();
+  
+};
+
+
+runner( function() {console.log("okay");});
+
+runner(say_hi() )// no work
+
+
+
+function answerLogger(input) {
+  
+ console.log( input() );
+  
+  
+  
+}
+
+answerLogger(function(){
+  return "I should be console logged"; });
+
+
+
+function answer_collector (functions_array) {
+  var results_array = [];
+  
+  for (var i = 0; i < functions_array.length; i++) {
+  
+  results_array.push(functions_array[i]());
+  
+  }
+  return console.log(results_array);
+  
+}
+
+
+var fn1 = function () {
+  return "this should be the first value in results array";
+};
+
+answer_collector([fn1, function(){ return "this should be the second value in results array"; }]);
+
+
+
+var returns_a_func = function () {
+  return function() {console.log("BOOP");};
+};
+
+returns_a_func()();
+
+
+
+
+
+
+// Exercise 3
+
+
+
+
+function first(input) {
+  
+  return function (input) {
+    
+    return input + 5;
+  }
+  
+}
+
+console.log(first()(5));
+
+var add_fiver = first();
+
+console.log(add_fiver(5)); //should print 10
+
+console.log(add_fiver(3)); //should print 8
+
+
+
+var global_variable = "hello world!";
+
+function justARegularFunction () {
+  var localVariable = "hello local scope!";
+  console.log(localVariable);
+}
+
+console.log(global_variable);
+
+
+justARegularFunction();
+
+
+var word = 'original';
+var phrase = ' is the word';
+var newWord = 'changed';
+
+var wordChanger = function (newWord) {
+  var word = newWord;
+  console.log(word + phrase);
+};
+
+
+var leakyWordChanger = function (newWord) {
+  word = newWord;
+  console.log(word + phrase)
+}
+
+console.log(word + phrase);
+console.log(newWord + phrase);
+
+wordChanger(newWord);
+
+console.log(word + phrase);
+console.log(newWord + phrase);
+
+
+leakyWordChanger(newWord);
+
+console.log(word + phrase);
+console.log(newWord + phrase);
+
+
+
+// Exercise 4
+
+function secret_keeper(string1, string2) {
+  
+var secret = "shhh secret";
+  
+  return console.log(string1 + secret + string2);
+  
+}
+
+console.log(secret_keeper("hey ", " you"))
+
+
+
+
+// Exercise 5
+
+var number = 10;
+
+function adds10(input) {
+    
+  console.log(input + number);
+  
+}
+console.log(adds10(10));
+console.log(number);
+
+function leakyAdds10(input) {
+  
+  return (number = (input + number));
+  
+}
+
+console.log(leakyAdds10(10));
+
+console.log(number);
+
+
+
+
+// Closure
+
+
+var returns_a_func = function () {
+  
+  var word = 'I can see inside';
+  
+  return function() { 
+      console.log('BOOP! ' + word); 
+  };
+  
+  
+};
+
+
+var word = 'I can see outside';
+
+var new_booper = returns_a_func();
+
+console.log( returns_a_func() ); //returns whole func box
+console.log(word);
+
+new_booper(); // logs the inner function in returns_a_func
+
+
+
+var returns_a_func = function () {
+  
+  var number = 5;
+    
+  return function () { 
+    console.log( "the number is: " + number) ;
+  };
+  
+};
+
+
+
+var number = 4;
+console.log( returns_a_func() ); // doesn't open anything, shows the whole function inside
+
+
+var fn  = returns_a_func();
+fn(); // opens the func inside and console logs it
+
+var func_runner = function(func) {
+    var number = 3;
+    func();
+  
+};
+
+func_runner(fn); // this logs the returns_a_func as "func()" inside opens the "returns_a_func" func which is saved in the fn variable
+
+
+
+
+
+// Exercise 6
+
+
+function multipliesBy (input) {
+
+  return function (input2) {
+    
+    return console.log(input * input2);
+    
+  };
+
+}
+
+multipliesBy(2)(8);
+
+var hey = multipliesBy(3);
+
+hey(3);
+
+var times5 = multipliesBy(5);
+times5(4); // 20
+
+var times10 = multipliesBy(10);
+times10(32); // 320
+
+
